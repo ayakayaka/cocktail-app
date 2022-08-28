@@ -1,0 +1,9 @@
+<h2>Ingredient</h2>
+<%= @cocktail.name %>
+<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail)%>
+<% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  <%= link_to "delete", dose_path(dose), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<% end %>
+<%= link_to "back", cocktails_path %>
