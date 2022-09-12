@@ -4,6 +4,8 @@
 <% @cocktail.doses.each do |dose| %>
   <%= dose.description %>
   <%= dose.ingredient.name %>
-  <%= link_to "delete", dose_path(dose), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  <%= link_to dose_path(dose), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash-can"></i>
+  <% end %>
 <% end %>
 <%= link_to "back", cocktails_path %>
