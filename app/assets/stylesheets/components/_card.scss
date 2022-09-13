@@ -1,6 +1,10 @@
 .card {
+  padding: 3px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin-bottom: 30px;
-
+  order: 3;
+  grid-gap: 16px;
+  align-items: center;
+  text-align: center;
 }

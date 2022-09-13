@@ -4,7 +4,7 @@
 </div>
 <div class="container-show">
   <% @cocktail.doses.each do |dose| %>
-    <div class="card" style="width: 20rem;">
+    <div class="card" style="width: 25rem;">
       <ul class="ingredient"><%= dose.ingredient.name %></ul>
       <ul class="description"><%= dose.description %></ul>
       <ul class="delete-button">
@@ -15,4 +15,6 @@
     </div>
   <% end %>
 </div>
-<%= link_to "back", cocktails_path, class: "btn" %>
+<div class="container-end">
+  <%= link_to "back", cocktails_path, class: "btn" %>
+</div>

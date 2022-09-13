@@ -1,11 +1,19 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
   background-image: url(cocktail_banner.jpg);
   height: 300px;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+.banner-h1 {
+  color: white;
+  font-size: 100px;
+  // font-weight: bold;
+  font-family: 'Stint Ultra Condensed', sans-serif;
+  margin-left: 20px;
+  position: absolute;
+  top: 60px;
+
 }
 .banner-button{
   width: 260px;
@@ -18,31 +26,6 @@
     background-color: rgba(255, 132, 0, 0.892);
   }
 }
-
-// a{
-//   font-size: 26px;
-//   color: white;
-//   text-decoration: auto;
-//   display: inline;
-//   text-align: center;
-//   &:hover {
-//     color: purple;
-//   }
-// }
-
-.banner h1 {
-  color: white;
-  font-size: 100px;
-  font-weight: bold;
-  font-family: 'Stint Ultra Condensed', sans-serif;
-}
-
-// .banner p {
-//   font-size: 20px;
-//   color: white;
-//   opacity: .7;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-// }
 
 
 .card-category {
@@ -58,6 +41,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover {
+    margin-top: -2;
+  }
   a {
     color: white;
     display: inline;
