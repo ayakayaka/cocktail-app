@@ -1,11 +1,18 @@
-<h2>Ingredient</h2>
-<%= @cocktail.name %>
-<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail)%>
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
-  <%= link_to dose_path(dose), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-    <i class="fa-solid fa-trash-can"></i>
+<div class="container-title">
+  <h1>🍋Ingredient of <%= @cocktail.name %>🍓</h1>
+  <%= link_to "Add an ingredient ➕", new_cocktail_dose_path(@cocktail), class:"btn ingredient-button" %>
+</div>
+<div class="container-show">
+  <% @cocktail.doses.each do |dose| %>
+    <div class="card" style="width: 20rem;">
+      <ul class="ingredient"><%= dose.ingredient.name %></ul>
+      <ul class="description"><%= dose.description %></ul>
+      <ul class="delete-button">
+        <%= link_to dose_path(dose), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="fa-solid fa-trash-can"></i>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
-<% end %>
-<%= link_to "back", cocktails_path %>
+</div>
+<%= link_to "back", cocktails_path, class: "btn" %>

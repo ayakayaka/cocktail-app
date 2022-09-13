@@ -10,3 +10,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-item {
+  color: black;
+  text-align: center;
+  display: inline-block;
+  a {
+  text-decoration: auto;
+  color: black;
+  &:hover {
+    color: $pink;
+  }
+  }
+}
