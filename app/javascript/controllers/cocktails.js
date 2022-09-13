@@ -15,7 +15,6 @@ function getRandomCocktail(){
         return;
         }
 
-        // Examine the text in the response
         response.json().then(function(data) {
         console.log(data);
         });
